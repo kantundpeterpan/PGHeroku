@@ -32,19 +32,20 @@ class DataTree(it.Tree):
         folders = []
         for root, dirs, files in os.walk('./'):
             #exclude hidden directories and stuff like __pycache__
-            if root.split('/')[1].startswith('.') and root.split('/')[1].startswith('_'):
+            if root.split('/')[1].startswith('.') or root.split('/')[1].startswith('_'):
                 next
-            #dirs = [d for d in dirs if not d.startswith('.') and not d.startswith('_')]
-            dirs.sort()
-            for d in dirs:
-                n = FolderNode(d)
-                for f in os.listdir(d):
-                    dn = DataNode(os.path.splitext(f)[0], 
-                                  file = os.path.join('./', d, f),
-                                  parent = n)
-                    #dn.observe(dn.file_on_event, 'selected')
-                    n.add_node(dn)
-                folders.append(n)
+            else:
+                dirs = [d for d in dirs if not d.startswith('.') and not d.startswith('_')]
+                dirs.sort()
+                for d in dirs:
+                    n = FolderNode(d)
+                    for f in os.listdir(d):
+                        dn = DataNode(os.path.splitext(f)[0], 
+                                      file = os.path.join('./', d, f),
+                                      parent = n)
+                        #dn.observe(dn.file_on_event, 'selected')
+                        n.add_node(dn)
+                    folders.append(n)
         
         return cls(folders)
     
