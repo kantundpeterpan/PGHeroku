@@ -31,7 +31,10 @@ class DataTree(it.Tree):
     def from_path(cls, path='./'):
         folders = []
         for root, dirs, files in os.walk('./'):
-            dirs = [d for d in dirs if not d.startswith('.') and not d.startswith('_')]
+            #exclude hidden directories and stuff like __pycache__
+            if root.split('/')[1].startswith('.') and root.split('/')[1].startswith('_'):
+                next
+            #dirs = [d for d in dirs if not d.startswith('.') and not d.startswith('_')]
             dirs.sort()
             for d in dirs:
                 n = FolderNode(d)
