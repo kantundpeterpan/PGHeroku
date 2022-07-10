@@ -5,32 +5,13 @@ channels:
   - defaults
 dependencies:
   - bokeh=2.2.3
-  - ca-certificates=2020.6.20=hecda079_0
-  - certifi=2020.6.20=py38h924ce5b_2
-  - cffi=1.14.3=py38h1bdcb99_1
-  - dbus=1.13.6=he372182_0
-  - decorator=4.4.2=py_0
-  - defusedxml=0.6.0=py_0
-  - entrypoints=0.3=py38h32f6830_1002
-  - expat=2.2.9=he1b5a44_2
-  - fontconfig=2.13.1=h86ecdb6_1001
-  - freetype=2.10.4=he06d7ca_0
-  - gettext=0.19.8.1=hf34092f_1004
-  - glib=2.64.3=h6f030ca_0
-  - gst-plugins-base=1.14.5=h0935bb2_2
-  - gstreamer=1.14.5=h36ae1b5_2
-  - icu=64.2=he1b5a44_1
-  - importlib-metadata=2.0.0=py_1
-  - importlib_metadata=2.0.0=1
-  - ipykernel=5.3.4=py38h1cdfbd6_1
-  - ipython=7.18.1=py38h1cdfbd6_1
-  - ipython_genutils=0.2.0=py_1
-  - ipytree=0.1.8=py_0
-  - ipywidgets=7.5.1=pyh9f0ad1d_1
-  - jedi=0.17.2=py38h32f6830_1
-  - jinja2=2.11.2=pyh9f0ad1d_0
-  - jpeg=9d=h516909a_0
-  - jsonschema=3.2.0=py_2
+  - ipython=7.18.1
+  - ipython_genutils
+  - ipytree=0.1.8
+  - ipywidgets=7.5.1
+  - jedi=0.17.2
+  - jinja2=2.11.2
+  - jsonschema=3.2.0
   - jupyter=1.0.0
   - jupyter_bokeh=2.0.3
   - jupyter_client=6.1.7
